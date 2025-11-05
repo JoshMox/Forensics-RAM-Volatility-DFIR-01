@@ -1,0 +1,23 @@
+# Comandos de Volatility Framework 2.6.1 (Análisis AFI-01)
+# Perfil utilizado: VistaSP1x86
+# Imagen: memdump.mem
+
+# 1. Información de la Imagen (Primer Paso)
+# Propósito: Identificar la fecha de captura y el perfil sugerido/correcto.
+python vol.py imageinfo -f memdump.mem
+
+# 2. Análisis de Consola y Comandos Ejecutados (Activity)
+# Propósito: Extraer el historial de comandos ejecutados en cmd.exe.
+python vol.py cmdscan -f memdump.mem --profile=VistaSP1x86
+
+# 3. Consolas (Terminales) Abiertas
+# Propósito: Muestra la actividad de las consolas activas, vinculando procesos a títulos de ventana.
+python vol.py consoles -f memdump.mem --profile=VistaSP1x86
+
+# 4. Árbol de Procesos (Process Activity)
+# Propósito: Listar procesos activos (padres e hijos) para detectar relaciones sospechosas.
+python vol.py pstree -f memdump.mem --profile=VistaSP1x86
+
+# 5. Conexiones de Red (Network Activity)
+# Propósito: Identificar conexiones de red activas, puertos abiertos y la posible IP de ataque.
+python vol.py netscan -f memdump.mem --profile=VistaSP1x86
