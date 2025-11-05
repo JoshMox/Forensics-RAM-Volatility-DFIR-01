@@ -1,4 +1,4 @@
-# 🛡️ Análisis Forense de Memoria RAM (AFI-01)
+# 🛡️ Análisis Forense de Memoria RAM (DFIR-01)
 
 Este proyecto documenta el proceso y los resultados del análisis forense de una imagen de memoria RAM capturada de un servidor con comportamiento anómalo. El objetivo principal fue identificar la actividad maliciosa, los comandos ejecutados por el atacante y los indicios de persistencia y acceso remoto.
 
